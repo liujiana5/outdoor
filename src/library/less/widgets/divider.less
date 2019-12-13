@@ -1,0 +1,30 @@
+.bt-divider {
+  text-transform: uppercase;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  margin: 15px;
+  font-size: 14px;
+  font-weight: 300;
+  min-height: 22px;
+  color: @gray;
+  &:after,
+  &:before {
+    position: absolute;
+    content: ' ';
+    width: 35%;
+    top: 50%;
+    height: 0;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #fdfdfd;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:before {
+    left: 0;
+  }
+}

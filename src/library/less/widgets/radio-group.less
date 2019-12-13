@@ -1,0 +1,10 @@
+.bt-radio-group {
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none; // 兼容ie10+
+  // chrome 和Safari
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  overflow: -moz-scrollbars-none; // Firefox
+}

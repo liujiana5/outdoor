@@ -1,0 +1,62 @@
+.bt-page {
+  ul {
+    display: inline-block;
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    text-align: center;
+    border: 1px solid #dcdee2;
+    background-color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12px;
+    height: 32px;
+    min-width: 32px;
+    line-height: 30px;
+    margin-right: 8px;
+    border-radius: 4px;
+
+    &:hover {
+      color: @blue;
+      border-color: @blue;
+    }
+    &.bt-active {
+      color: @white;
+      border-color: @blue;
+      background-color: @blue;
+    }
+    &.bt-jump {
+      color: #ccc;
+      border-color: transparent;
+      &:after {
+        content: '\2022\2022\2022';
+        display: block;
+        letter-spacing: 1px;
+        color: #ccc;
+        text-align: center;
+        -webkit-font-smoothing: antialiased;
+      }
+      .bt-icon {
+        color: @blue;
+        font-size: 10px;
+        display: none;
+      }
+      &:hover {
+        &:after {
+          content: none;
+        }
+        .bt-icon {
+          display: block;
+        }
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: #ccc;
+      border-color: #dcdee2;
+    }
+  }
+}
